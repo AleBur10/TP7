@@ -20,11 +20,11 @@ body {
 .fondoIndex{
   background-image: url(/Millonario.jpg);
   background-size: cover;
+  background-color: brown;
 }
 #bodyPregunta{
   background-image: url(/Fondo.jpg);
   background-size: cover;
-  margin-left: -6%
 }
 
 #play{
@@ -67,12 +67,16 @@ body {
   margin-top: -50%;
 }
 #Retirar{
-  width: 15%;
-  margin-left: 105%;
+  width: 20%;
+  margin-left: 45%;
 }
-
-
-
+#fondoRespuestaPregunta{
+  background-image: url();
+  background-size: cover;
+}
+.opcionesRespuesta{
+  margin-top: 50%;
+}
 
 
 #FinDelJuego{

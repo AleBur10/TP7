@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\VisualStudioCode\\MVC\\TP7_Bursztyn_Witlis_Akselrad\\TP7_Bursztyn_Witlis_Akselrad.csproj": {}
+    "C:\\Users\\46878021\\Desktop\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj": {}
   },
   "projects": {
-    "Z:\\VisualStudioCode\\MVC\\TP7_Bursztyn_Witlis_Akselrad\\TP7_Bursztyn_Witlis_Akselrad.csproj": {
+    "C:\\Users\\46878021\\Desktop\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\VisualStudioCode\\MVC\\TP7_Bursztyn_Witlis_Akselrad\\TP7_Bursztyn_Witlis_Akselrad.csproj",
+        "projectUniqueName": "C:\\Users\\46878021\\Desktop\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
         "projectName": "TP7_Bursztyn_Witlis_Akselrad",
-        "projectPath": "Z:\\VisualStudioCode\\MVC\\TP7_Bursztyn_Witlis_Akselrad\\TP7_Bursztyn_Witlis_Akselrad.csproj",
+        "projectPath": "C:\\Users\\46878021\\Desktop\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
         "packagesPath": "C:\\Users\\46878021\\.nuget\\packages\\",
-        "outputPath": "Z:\\VisualStudioCode\\MVC\\TP7_Bursztyn_Witlis_Akselrad\\obj\\",
+        "outputPath": "C:\\Users\\46878021\\Desktop\\TP7\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
