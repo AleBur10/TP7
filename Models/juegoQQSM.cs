@@ -18,12 +18,12 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
         public static void IniciarJuego(string nombre, DateTime FechaHora)
         {
             _preguntaActual=1;
-            _respuestaCorrectaActual=0;
+            _respuestaCorrectaActual= ' ';
             _posicionPozo=1;
             _pozoAcumuladoSeguro=5000;
             _pozoAcumulado=0;
             _comodin5050=true;
-            _comodinDobleCHance=true;
+            _comodinDobleChance=true;
             _comodinSaltearPregunta=true;
             
              string sql="INSERT INTO Jugadores(idJugador, Nombre, FechaHora) VALUES(@idJugador, @Nombre, @FechaHora)";

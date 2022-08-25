@@ -71,13 +71,19 @@ body {
   margin-left: 45%;
 }
 #fondoRespuestaPregunta{
-  background-image: url();
+  background-image: url(/respuestaPregunta.jpg);
   background-size: cover;
 }
 .opcionesRespuesta{
-  margin-top: 50%;
+  margin-top: 28%;
 }
-
+#seguirOretirarse{
+  background-color: rgb(224, 195, 99);
+  border: 4px rgb(210, 158, 92) solid;
+  width: 46%;
+  margin-top: 15%;
+  margin-left: 28%;
+}
 
 #FinDelJuego{
   text-align: center;
