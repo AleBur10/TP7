@@ -8,53 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TP7_Bursztyn_Witlis_Akselrad
 build_property.RootNamespace = TP7_Bursztyn_Witlis_Akselrad
-build_property.ProjectDir = c:\Users\46878021\TP7\
+build_property.ProjectDir = c:\Users\46919368\TPB\TP7\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\46878021\TP7
+build_property.MSBuildProjectDirectory = c:\Users\46919368\TPB\TP7
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/46878021/TP7/Views/Home/Index.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/Home/PantallaFindelJuego.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/Home/PantallaFindelJuego.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYW50YWxsYUZpbmRlbEp1ZWdvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/Home/Player.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/Home/Player.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGF5ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/Home/Pregunta.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/Home/Pregunta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmVndW50YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/Home/Privacy.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/Home/RespuestapreguntaOk.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/Home/RespuestapreguntaOk.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXNwdWVzdGFwcmVndW50YU9rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/Shared/Error.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/_ViewImports.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/_ViewStart.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/46878021/TP7/Views/Shared/_Layout.cshtml]
+[c:/Users/46919368/TPB/TP7/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9y32xkhf4w

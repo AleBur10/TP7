@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\46878021\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj": {}
+    "c:\\Users\\46919368\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj": {}
   },
   "projects": {
-    "C:\\Users\\46878021\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj": {
+    "c:\\Users\\46919368\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\46878021\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
+        "projectUniqueName": "c:\\Users\\46919368\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
         "projectName": "TP7_Bursztyn_Witlis_Akselrad",
-        "projectPath": "C:\\Users\\46878021\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
-        "packagesPath": "C:\\Users\\46878021\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\46878021\\TP7\\obj\\",
+        "projectPath": "c:\\Users\\46919368\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
+        "packagesPath": "C:\\Users\\46919368\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\46919368\\TP7\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\46878021\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\46919368\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,6 +42,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
