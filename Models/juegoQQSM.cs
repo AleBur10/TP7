@@ -52,10 +52,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
 
         }
 
-        public static List<> ObtenerRespuestas()
-        {
 
-        }
 
     }
 }
