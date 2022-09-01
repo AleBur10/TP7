@@ -39,6 +39,23 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             _player.FechaHora = DateTime.Now;
 
         }
+        public static Pregunta ObtenerProximaPregunta()
+        {
+            _preguntaActual++;
+            Pregunta preguntaActual = null;
+            using (SqlConnection bd = new SqlConnection(_connectionString))
+            {
+                string sql = "SELECT * FROM PREGUNTAS WHERE idPregunta= @pPregunta";
+                preguntaActual = bd.QueryFirstOrDefault<Pregunta>(sql, new { pPregunta = _preguntaActual });
+            }
+            return preguntaActual;
+
+        }
+
+        public static List<> ObtenerRespuestas()
+        {
+
+        }
 
     }
 }
