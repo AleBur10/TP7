@@ -17,79 +17,93 @@ body {
   margin-bottom: 60px;
 }
 
-.fondoIndex{
+.fondoIndex {
   background-image: url(/Millonario.jpg);
   background-size: cover;
   background-color: brown;
 }
-#bodyPregunta{
+
+#bodyPregunta {
   background-image: url(/Fondo.jpg);
   background-size: cover;
 }
 
-#play{
+#play {
   position: absolute;
   top: 83%;
   left: 52%;
   width: 10%;
 }
-#play2{
+
+#play2 {
   position: absolute;
   top: 80%;
   left: 44.5%;
   width: 10%;
 }
-#player{
+
+#player {
   position: absolute;
   top: 83.5%;
   left: 42%;
   width: 10%;
 }
-#Caja{
+
+#Caja {
   background-color: rgb(106, 10, 161);
   margin-top: 5%;
 }
-#Caja2{
+
+#Caja2 {
   background-color: rgb(106, 10, 161);
   margin-top: 2%;
 }
-#Pregunta{
+
+#Pregunta {
   background-color: rgb(3, 151, 151);
   margin-top: 0%;
 }
-.comodin{
+
+.comodin {
   width: 10%;
   margin-top: -18%;
   margin-left: -14%;
 }
-.imagenPregunta{
+
+.imagenPregunta {
   width: 20%;
   margin-left: 31.8%;
 }
-#plataPregunta{
+
+#plataPregunta {
   background-color: blue;
   width: 15%;
   margin-left: 105%;
   margin-top: -50%;
 }
-#plataDivision{
+
+#plataDivision {
   background-color: blue;
   width: 15%;
   margin-left: 105%;
   margin-top: -43%;
 }
-#Retirar{
+
+#Retirar {
   width: 20%;
   margin-left: 45%;
 }
-#fondoRespuestaPregunta{
+
+#fondoRespuestaPregunta {
   background-image: url(/respuestaPregunta.jpg);
   background-size: cover;
 }
-.opcionesRespuesta{
+
+.opcionesRespuesta {
   margin-top: 28%;
 }
-#seguirOretirarse{
+
+#seguirOretirarse {
   background-color: rgb(224, 195, 99);
   border: 4px rgb(210, 158, 92) solid;
   width: 46%;
@@ -97,7 +111,7 @@ body {
   margin-left: 28%;
 }
 
-#FinDelJuego{
+#FinDelJuego {
   text-align: center;
   background-image: url(/final.jpg);
   background-size: cover;

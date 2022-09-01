@@ -18,7 +18,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             _textoRespuesta = TextoRespuesta;
             _correcta = Correcta;
         }
-        public Respuesta(){}
+        public Respuesta() { }
         public int IdRespuesta
         {
             get { return _idRespuesta; }
@@ -30,7 +30,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             get { return _idPregunta; }
             set { _idPregunta = value; }
         }
-        
+
         public char OpcionRespuesta
         {
             get { return _opcionRespuesta; }
@@ -41,12 +41,12 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             get { return _textoRespuesta; }
             set { _textoRespuesta = value; }
         }
-        
+
         public bool Correcta
         {
             get { return _correcta; }
             set { _correcta = value; }
         }
-        
+
     }
 }

@@ -14,7 +14,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             _textoPregunta = TextoPregunta;
             _nivelDificultad = NivelDificultad;
         }
-        public Pregunta(){}
+        public Pregunta() { }
         public int IdPregunta
         {
             get { return _idPregunta; }
@@ -26,12 +26,12 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             get { return _textoPregunta; }
             set { _textoPregunta = value; }
         }
-        
+
         public int NivelDificultad
         {
             get { return _nivelDificultad; }
             set { _nivelDificultad = value; }
         }
-        
+
     }
 }

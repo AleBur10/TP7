@@ -22,7 +22,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             _comodin50 = Comodin50;
             _comodinSaltear = ComodinSaltear;
         }
-        public Jugador(){}
+        public Jugador() { }
         public int IdJugador
         {
             get { return _idJugador; }
@@ -34,7 +34,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             get { return _nombre; }
             set { _nombre = value; }
         }
-        
+
         public DateTime FechaHora
         {
             get { return _fechaHora; }
@@ -45,7 +45,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             get { return _pozoGanado; }
             set { _pozoGanado = value; }
         }
-        
+
         public bool ComodinDobleChance
         {
             get { return _comodinDobleChance; }
@@ -56,12 +56,12 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             get { return _comodin50; }
             set { _comodin50 = value; }
         }
-        
+
         public bool ComodinSaltear
         {
             get { return _comodinSaltear; }
             set { _comodinSaltear = value; }
         }
-        
+
     }
 }
