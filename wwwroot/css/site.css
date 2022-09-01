@@ -30,13 +30,19 @@ body {
 #play{
   position: absolute;
   top: 83%;
-  left: 44.5%;
+  left: 52%;
   width: 10%;
 }
 #play2{
   position: absolute;
   top: 80%;
   left: 44.5%;
+  width: 10%;
+}
+#player{
+  position: absolute;
+  top: 83.5%;
+  left: 42%;
   width: 10%;
 }
 #Caja{
@@ -65,6 +71,12 @@ body {
   width: 15%;
   margin-left: 105%;
   margin-top: -50%;
+}
+#plataDivision{
+  background-color: blue;
+  width: 15%;
+  margin-left: 105%;
+  margin-top: -43%;
 }
 #Retirar{
   width: 20%;

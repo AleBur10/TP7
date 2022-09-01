@@ -34,6 +34,10 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult DivisionDeOpciones()
+    {
+        return View();
+    }
     // [HttpGet]
     // public IActionResult Jugar(string Nombre)
     // {

@@ -128,3 +128,11 @@ C:\Users\46878021\TP7\obj\Debug\net6.0\refint\TP7_Bursztyn_Witlis_Akselrad.dll
 C:\Users\46878021\TP7\obj\Debug\net6.0\TP7_Bursztyn_Witlis_Akselrad.pdb
 C:\Users\46878021\TP7\obj\Debug\net6.0\TP7_Bursztyn_Witlis_Akselrad.genruntimeconfig.cache
 C:\Users\46878021\TP7\obj\Debug\net6.0\ref\TP7_Bursztyn_Witlis_Akselrad.dll
+C:\Users\46878021\TP7\bin\Debug\net6.0\Dapper.dll
+C:\Users\46878021\TP7\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\46878021\TP7\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\46878021\TP7\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\46878021\TP7\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\46878021\TP7\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\46878021\TP7\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\46878021\TP7\obj\Debug\net6.0\TP7_Bursztyn_Witlis_Akselrad.csproj.CopyComplete

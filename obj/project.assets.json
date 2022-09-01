@@ -482,23 +482,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\46919368\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\46878021\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\46919368\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
+      "projectUniqueName": "C:\\Users\\46878021\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
       "projectName": "TP7_Bursztyn_Witlis_Akselrad",
-      "projectPath": "c:\\Users\\46919368\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
-      "packagesPath": "C:\\Users\\46919368\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\46919368\\TP7\\obj\\",
+      "projectPath": "C:\\Users\\46878021\\TP7\\TP7_Bursztyn_Witlis_Akselrad.csproj",
+      "packagesPath": "C:\\Users\\46878021\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\46878021\\TP7\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\46919368\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\46878021\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -551,16 +552,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché c:\\Users\\46919368\\TP7\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
