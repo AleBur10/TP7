@@ -49,10 +49,17 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
                 preguntaActual = bd.QueryFirstOrDefault<Pregunta>(sql, new { pPregunta = _preguntaActual });
             }
             return preguntaActual;
-
         }
 
-
-
+        public static List<> ObtenerRespuestas()
+        {
+            List<Respuesta> listaRespuestas = new List<Respuesta>();
+            using (SqlConnection bd = new SqlConnection(_connectionString))
+            {
+                string sql = "SELECT textoRespuesta FROM RESPUESTAS WHERE idPregunta= @_preguntaActual";
+                listaRespuestas = bd.QueryFirstOrDefault<Respuesta>(sql, new { pRespuestaCorrectaActual = _respuestaCorrectaActual }).ToList();
+            }
+            return listaRespuestas;
+        }
     }
 }
