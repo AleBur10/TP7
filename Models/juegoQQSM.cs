@@ -86,5 +86,24 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             return acierto;
         }
         
+        public static List<Pozo> ListarPozo()
+        {
+            return _ListaPozo;
+        }
+        public static int DevolverPosicionPozo(int _posicionPozo)
+        {
+            return _posicionPozo;
+        }
+        public static char[] Descartar50()
+        {
+            if (Comodin50 == true)
+            {
+                using (SqlConnection bd = new SqlConnection(_connectionString))
+                {
+                    string sql = "UPDATE jugador SET comodin50 = false WHERE idJugador = @_idJugador";
+                }
+
+            }
+        }
     }
 }

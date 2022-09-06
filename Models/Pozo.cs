@@ -12,5 +12,15 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             _importe = importe;
             _valorSeguro = valorSeguro;
         }
+        public int Importe
+        {
+            get { return _importe; }
+            set { _importe = value; }
+        }
+        public int ValorSeguro
+        {
+            get { return _valorSeguro; }
+            set { _valorSeguro = value; }
+        }
     }
 }
