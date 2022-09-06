@@ -61,5 +61,30 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             }
             return listaRespuestas;
         }
+        public bool respuestaUsuario(char opcion, char opcionComodin = ' ')
+        {
+            bool acierto = false;
+            if (opcion != null && opcionComodin != null)
+            {
+                using (sqlConnection bd = new sqlConnection(_connectionString))
+                {
+                    string sql = "UPDATE Jugador SET ComodinDobleChance = False WHERE idJugador = @_idJugador";
+                    bd.Execute;
+                }
+
+
+            }
+            if (opcion == _respuestaCorrectaActual)
+            {
+                if (_ListaPozo[_posicionPozo]._valorSeguro == true)
+                {
+                    _pozoAcumuladoSeguro == _posicionPozo;
+                }
+                _posicionPozo++;
+                acierto = true;
+            }
+            return acierto;
+        }
+        
     }
 }
