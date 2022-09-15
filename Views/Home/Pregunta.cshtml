@@ -12,14 +12,14 @@
 
     <div class="container text-center">
       <div class="row">
-        <a class="col btn btn-outline-info" id="Caja" href='@Url.Action("PreguntaRespondida","Home")'>@ViewBag.Respuesta[0].OpcionRespuesta  @ViewBag.Respuesta[0].TextoRespuesta</a>
+        <a class="col btn btn-outline-info" id="Caja" href='@Url.Action("PreguntaRespondida","Home", new {opcion=@ViewBag.Respuesta[0].OpcionRespuesta})'>@ViewBag.Respuesta[0].OpcionRespuesta  @ViewBag.Respuesta[0].TextoRespuesta</a>
         <a style="margin-left: 2%;" class="col btn btn-outline-info" id="Caja"
-          href='@Url.Action("PreguntaRespondida","Home")'>@ViewBag.Respuesta[1].OpcionRespuesta  @ViewBag.Respuesta[1].TextoRespuesta</a>
+          href='@Url.Action("PreguntaRespondida","Home", new {opcion=@ViewBag.Respuesta[1].OpcionRespuesta})'>@ViewBag.Respuesta[1].OpcionRespuesta  @ViewBag.Respuesta[1].TextoRespuesta</a>
       </div>
       <div class="row">
-        <a class="col btn btn-outline-info" id="Caja2" href='@Url.Action("PreguntaRespondida","Home")'>@ViewBag.Respuesta[2].OpcionRespuesta  @ViewBag.Respuesta[2].TextoRespuesta</a>
+        <a class="col btn btn-outline-info" id="Caja2" href='@Url.Action("PreguntaRespondida","Home", new {opcion=@ViewBag.Respuesta[2].OpcionRespuesta})'>@ViewBag.Respuesta[2].OpcionRespuesta  @ViewBag.Respuesta[2].TextoRespuesta</a>
         <a style="margin-left: 2%;" class="col btn btn-outline-info" id="Caja2"
-          href='@Url.Action("PreguntaRespondida","Home")'>@ViewBag.Respuesta[3].OpcionRespuesta  @ViewBag.Respuesta[3].TextoRespuesta</a>
+          href='@Url.Action("PreguntaRespondida","Home", new {opcion=@ViewBag.Respuesta[3].OpcionRespuesta})'>@ViewBag.Respuesta[3].OpcionRespuesta  @ViewBag.Respuesta[3].TextoRespuesta</a>
       </div>
     </div>
     <div class="row comodin">

@@ -26,8 +26,20 @@ public class HomeController : Controller
     {
         juegoQQSM.IniciarJuego(Nombre);
         ViewBag.Pregunta = juegoQQSM.ObtenerProximaPregunta();
-        ViewBag.Respuestas = juegoQQSM.ObtenerRespuestas();
+        ViewBag.Respuesta = juegoQQSM.ObtenerRespuestas();
         return View();
+    }
+    public IActionResult PreguntaRespondida(char opcion, char opcionComodin)
+    {
+        var acierto = juegoQQSM.respuestaUsuario(opcion, opcionComodin);
+        if (acierto == true)
+        {
+            return View("RespuestapreguntaOk");
+        }
+        else
+        {
+            return View("PantallaFindelJuego");
+        }
     }
     public IActionResult PantallaFindelJuego()
     {
@@ -41,44 +53,9 @@ public class HomeController : Controller
     {
         return View();
     }
-  //  [HttpGet]
-    /*public IActionResult PreguntaRespondida(char Opcion1, char Opcion2, char Opcion3, char Opcion4)
-    {
-        ViewBag.Opciones = juegoQQSM.ObtenerRespuestas(Opcion1, Opcion2, Opcion3, Opcion4);
-        if(Opcion1 != null){
-           return View("RespuestapreguntaOK");
-        }
-        else
-        {
-           return View("PantallaFindelJuego");
-        }
-        if(Opcion2 != null){
-           return View("RespuestapreguntaOK");
-        }
-        else
-        {
-           return View("PantallaFindelJuego");
-        }
-        if(Opcion3 != null){
-           return View("RespuestapreguntaOK");
-        }
-        else
-        {
-           return View("PantallaFindelJuego");
-        }
-        if(Opcion4 != null){
-           return View("RespuestapreguntaOK");
-        }
-        else
-        {
-           return View("PantallaFindelJuego");
-        }
-    }*/
-    // public IActionResult FinDelJuego()
-    // {
-    //     ViewBag.DetalleJugador = juegoQQSM.verInfoJugador(IdJugador);
-    //     return View();
-    // }
+
+
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
