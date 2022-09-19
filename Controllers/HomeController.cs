@@ -38,7 +38,17 @@ public class HomeController : Controller
         ViewBag.Respuesta = juegoQQSM.ObtenerRespuestas();
         return View();
     }
-    public IActionResult PreguntaRespondida(char opcion, char opcionComodin)
+
+    public IActionResult Uso5050()
+    {
+        ViewBag.Pozo = juegoQQSM.ListarPozo();
+        ViewBag.Pregunta = juegoQQSM.ObtenerProximaPregunta();
+
+        ViewBag.Pregunta = juegoQQSM.VolverUnaPreguntaAtras();
+        ViewBag.Respuesta = juegoQQSM.Usar5050();
+        return View("Pregunta");
+    }
+    public IActionResult PreguntaRespondida(char opcion, char opcionComodin, bool uso5050, bool usoSaltear, bool usoDoble)
     {
         var acierto = juegoQQSM.respuestaUsuario(opcion, opcionComodin);
         ViewBag.Pozo = juegoQQSM.ListarPozo();

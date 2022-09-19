@@ -65,6 +65,17 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
         {
             return _preguntaActual;
         }
+        public static Pregunta VolverUnaPreguntaAtras()
+        {
+            _preguntaActual--;
+            Pregunta preguntaActual = null;
+            using (SqlConnection bd = new SqlConnection(_connectionString))
+            {
+                string sql = "SELECT * FROM PREGUNTAS WHERE idPregunta= @pPregunta";
+                preguntaActual = bd.QueryFirstOrDefault<Pregunta>(sql, new { pPregunta = _preguntaActual });
+            }
+            return preguntaActual;
+        }
         public static Pregunta ObtenerProximaPregunta()
         {
             _preguntaActual++;
@@ -127,7 +138,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
         }
         public static int DevolverImportePozoActual(bool acerto)
         {
-            if (acerto == true) 
+            if (acerto == true)
             {
                 if (_ListaPozo[_posicionPozo].ValorSeguro == true)
                 {
@@ -144,37 +155,103 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
         {
             return _ListaPozo[_posicionPozo].Importe;
         }
+        public static bool ChequearSiUso5050()
+        {
+            bool usado = false;
+            using (SqlConnection bd = new SqlConnection(_connectionString))
+            {
+                string sql = "SELECT Comodin50 FROM Jugadores WHERE idJugador = @pidJugador ";
+                usado = bd.QueryFirstOrDefault<bool>(sql, new { pidJugador = _player.IdJugador });
+            }
+            return usado;
+        }
+        public static bool ChequearSiUsoDobleChance()
+        {
+            bool usado = false;
+            using (SqlConnection bd = new SqlConnection(_connectionString))
+            {
+                string sql = "SELECT ComodinDobleChance FROM Jugadores WHERE idJugador = @pidJugador ";
+                usado = bd.QueryFirstOrDefault<bool>(sql, new { pidJugador = _player.IdJugador });
+            }
+            return usado;
+        }
+        public static bool ChequearSiUsoSaltear()
+        {
+            bool usado = false;
+            using (SqlConnection bd = new SqlConnection(_connectionString))
+            {
+                string sql = "SELECT ComodinSaltear FROM Jugadores WHERE idJugador = @pidJugador ";
+                usado = bd.QueryFirstOrDefault<bool>(sql, new { pidJugador = _player.IdJugador });
+            }
+            return usado;
+        }
+        public static List<Respuesta> Usar5050()
+        {
+            // validar si fue usado
+            // cambiarlo en la db
+            // usarlo
+            var usado = ChequearSiUso5050();
 
-        /* public static char[] Descartar50()
-         {
-             if (Comodin50 == true)
-             {
-                 using (SqlConnection bd = new SqlConnection(_connectionString))
-                 {
-                     string sql = "UPDATE jugador SET comodin50 = false WHERE idJugador = @_idJugador";   
 
-                 }
+            var id = _player.IdJugador;
+            using (SqlConnection bd = new SqlConnection(_connectionString))
+            {
+                string sql = "UPDATE Jugadores SET Comodin50=0 WHERE idJugador = @pidJugador";
+                bd.Execute(sql, new { pidJugador = id });
+            }
+            var rtas = ObtenerRespuestas();
 
-
-
-
-             }
-         }
-         public static void saltearPregunta(Pregunta idPregunta)
-         {
-             if (_comodinSaltearPregunta==true)
-             {
-
-                 using (SqlConnection bd = new SqlConnection(_connectionString))
-                 {
-                     string sql = "UPDATE jugador SET ComodinSaltear = false WHERE idJugador = @_idJugador";
-
-                 }
-             }
-         }
-         public static jugador devloverJugador()
-         {
-             return _player;
-         }*/
+            if (usado)
+            {
+                return rtas;
+            }
+            else
+            {
+            List<Respuesta> nuevas = new List<Respuesta>();
+            var i = 0;
+            var primeraVez = true;
+            #region crea nuevas respuestas
+            foreach (var rta in rtas)
+            {
+                if (primeraVez == false && rta.Correcta == false)
+                {
+                    nuevas.Add(rta);
+                    if (nuevas.Count == 2)
+                    {
+                        break;
+                    }
+                }
+                if (rta.Correcta == true)
+                {
+                    nuevas.Add(rta);
+                    primeraVez = false;
+                    i = rta.IdRespuesta;
+                }
+                else
+                {
+                    i = rta.IdRespuesta;
+                    primeraVez = false;
+                }
+            }
+            while (nuevas.Count > 2)
+            {
+                foreach (var rta in nuevas)
+                {
+                    if (rta.Correcta == true)
+                    {
+                        nuevas.RemoveAt(nuevas.Count - 2);
+                        break;
+                    }
+                    else
+                    {
+                        nuevas.RemoveAt(nuevas.Count - 1);
+                        break;
+                    }
+                }
+            }
+            return nuevas;
+            #endregion
+            }
+        }
     }
 }
