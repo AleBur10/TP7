@@ -8,8 +8,8 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
 {
     public static class juegoQQSM
     {
-        private static string _connectionString = "Server=A-PHZ2-CIDI-003;DataBase=JuegoQQSM;Trusted_Connection=true;";
-        private static int _preguntaActual;
+        private static string _connectionString = "Server=A-PHZ2-CIDI-022;DataBase=JuegoQQSM;Trusted_Connection=true;";
+        public static int _preguntaActual;
         private static char _respuestaCorrectaActual;
         private static int _posicionPozo;
         private static int _pozoAcumuladoSeguro;
@@ -34,23 +34,23 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             _ListaPozo.Add(new pozo(1000, false));
             _ListaPozo.Add(new pozo(2000, false));
             _ListaPozo.Add(new pozo(5000, false));
-            _ListaPozo.Add(new pozo(10000, true));
-            /*_ListaPozo.Add(20000);
-            _ListaPozo.Add(30000);
-            _ListaPozo.Add(50000);
-            _ListaPozo.Add(100000);
-            _ListaPozo.Add(130000);
-            _ListaPozo.Add(150000);
-            _ListaPozo.Add(180000);
-            _ListaPozo.Add(210000);
-            _ListaPozo.Add(250000);
-            _ListaPozo.Add(350000);
-            _ListaPozo.Add(400000);
-            _ListaPozo.Add(500000);
-            _ListaPozo.Add(750000);
-            _ListaPozo.Add(1000000);
-            _ListaPozo.Add(2000000);
-            _ListaPozo.Add(5000000);*/
+            _ListaPozo.Add(new pozo(10000, false));
+            _ListaPozo.Add(new pozo(20000, true));
+            _ListaPozo.Add(new pozo(30000, false));
+            _ListaPozo.Add(new pozo(50000, false));
+            _ListaPozo.Add(new pozo(100000, false));
+            _ListaPozo.Add(new pozo(130000, false));
+            _ListaPozo.Add(new pozo(150000, true));
+            _ListaPozo.Add(new pozo(180000, false));
+            _ListaPozo.Add(new pozo(210000, false));
+            _ListaPozo.Add(new pozo(250000, false));
+            _ListaPozo.Add(new pozo(350000, false));
+            _ListaPozo.Add(new pozo(400000, true));
+            _ListaPozo.Add(new pozo(500000, false));
+            _ListaPozo.Add(new pozo(750000, false));
+            _ListaPozo.Add(new pozo(1000000, false));
+            _ListaPozo.Add(new pozo(2000000, false));
+            _ListaPozo.Add(new pozo(5000000, true));
             string sql = "INSERT INTO Jugadores(Nombre,FechaHora,ComodinDobleChance,Comodin50,ComodinSaltear,PozoGanado) VALUES(@pNombre, @pFechaHora,1,1,1,0)";
             using (SqlConnection bd = new SqlConnection(_connectionString))
             {
@@ -87,11 +87,11 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             }
             return listaRespuestas;
         }
-        public static bool respuestaUsuario(char opcion, char opcionComodin = 'j')
+        public static bool respuestaUsuario(char opcion, char opcionComodin = 'g')
         {
             bool acierto = false;
             // Valida si se uso el comodin. Si no lo uso todavia, lo cambia en la db. Si ya lo habia usado, no se toman las rtas como corercta 
-            if (_comodinDobleChance == true && opcionComodin != 'j') // Si todavia no uso el comodin.
+            if (_comodinDobleChance == true && opcionComodin != 'g') // Si todavia no uso el comodin.
             {
                 _comodinDobleChance = false;
                 var id = _player.IdJugador;
@@ -101,17 +101,14 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
                     bd.Execute(sql, new { pidJugador = id });
                 }
             }
-            else
+            if (opcion == _respuestaCorrectaActual || opcionComodin == _respuestaCorrectaActual) //si las opciones que manda el usuario son correctas
             {
-                if (opcion == _respuestaCorrectaActual || opcionComodin == _respuestaCorrectaActual) //si las opciones que manda el usuario son correctas
-                {
                     if (_ListaPozo[_posicionPozo].ValorSeguro == true)
                     {
                         _pozoAcumuladoSeguro += _ListaPozo[_posicionPozo].Importe;
                     }
                     _posicionPozo++;
                     acierto = true;
-                }
             }
             return acierto;
         }

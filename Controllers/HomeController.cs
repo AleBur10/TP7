@@ -22,9 +22,15 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Pregunta(string Nombre)
+    public IActionResult PreguntaInicial(string Nombre)
     {
         juegoQQSM.IniciarJuego(Nombre);
+        ViewBag.Pregunta = juegoQQSM.ObtenerProximaPregunta();
+        ViewBag.Respuesta = juegoQQSM.ObtenerRespuestas();
+        return View("Pregunta");
+    }
+    public IActionResult Pregunta(string Nombre)
+    {
         ViewBag.Pregunta = juegoQQSM.ObtenerProximaPregunta();
         ViewBag.Respuesta = juegoQQSM.ObtenerRespuestas();
         return View();
