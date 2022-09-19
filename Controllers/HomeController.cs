@@ -27,10 +27,14 @@ public class HomeController : Controller
         juegoQQSM.IniciarJuego(Nombre);
         ViewBag.Pregunta = juegoQQSM.ObtenerProximaPregunta();
         ViewBag.Respuesta = juegoQQSM.ObtenerRespuestas();
+        ViewBag.Pozo = juegoQQSM.ListarPozo();
         return View("Pregunta");
+
     }
     public IActionResult Pregunta(string Nombre)
     {
+        ViewBag.PozoAcumulado = juegoQQSM.DevolverImportePozoActual();
+        ViewBag.Pozo = juegoQQSM.ListarPozo();
         ViewBag.Pregunta = juegoQQSM.ObtenerProximaPregunta();
         ViewBag.Respuesta = juegoQQSM.ObtenerRespuestas();
         return View();
@@ -38,6 +42,8 @@ public class HomeController : Controller
     public IActionResult PreguntaRespondida(char opcion, char opcionComodin)
     {
         var acierto = juegoQQSM.respuestaUsuario(opcion, opcionComodin);
+        ViewBag.PozoAcumulado = juegoQQSM.DevolverImportePozoActual();
+        ViewBag.Pozo = juegoQQSM.ListarPozo();
         if (acierto == true)
         {
             return View("RespuestapreguntaOk");
@@ -49,6 +55,7 @@ public class HomeController : Controller
     }
     public IActionResult PantallaFindelJuego()
     {
+        ViewBag.PozoAcumulado = juegoQQSM.DevolverImportePozoActual();
         return View();
     }
     public IActionResult RespuestapreguntaOK()

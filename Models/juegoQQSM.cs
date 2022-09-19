@@ -1,3 +1,4 @@
+using System.Net.NetworkInformation;
 using System;
 using Dapper;
 using System.Linq;
@@ -19,18 +20,18 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
         private static bool _comodinSaltearPregunta;
         private static List<pozo> _ListaPozo;
         private static Jugador _player;
-
         public static void IniciarJuego(string nombre)
         {
             _ListaPozo = new List<pozo>();
-            _preguntaActual = 1;
+            _preguntaActual = 0;
             _respuestaCorrectaActual = ' ';
-            _posicionPozo = 1;
+            _posicionPozo = 0;
             _pozoAcumuladoSeguro = 5000;
             _pozoAcumulado = 0;
             _comodin5050 = true;
             _comodinDobleChance = true;
             _comodinSaltearPregunta = true;
+            _ListaPozo.Add(new pozo(0, false));
             _ListaPozo.Add(new pozo(1000, false));
             _ListaPozo.Add(new pozo(2000, false));
             _ListaPozo.Add(new pozo(5000, false));
@@ -61,6 +62,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
         }
         public static Pregunta ObtenerProximaPregunta()
         {
+            _preguntaActual++;
             Pregunta preguntaActual = null;
             using (SqlConnection bd = new SqlConnection(_connectionString))
             {
@@ -103,28 +105,26 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             }
             if (opcion == _respuestaCorrectaActual || opcionComodin == _respuestaCorrectaActual) //si las opciones que manda el usuario son correctas
             {
-                    if (_ListaPozo[_posicionPozo].ValorSeguro == true)
-                    {
-                        _pozoAcumuladoSeguro += _ListaPozo[_posicionPozo].Importe;
-                    }
-                    _posicionPozo++;
-                    acierto = true;
+                if (_ListaPozo[_posicionPozo].ValorSeguro == true)
+                {
+                    _pozoAcumuladoSeguro += _ListaPozo[_posicionPozo].Importe;
+                }
+                _posicionPozo++;
+                acierto = true;
             }
             return acierto;
         }
         //incrementar posicion pozo. Si tiene pozo seguro recibe la guita del pozo seguro actual
 
-
-
-        /*  public static List<Pozo> ListarPozo()
-         {
-             return _ListaPozo;
-         }
-         public static int DevolverPosicionPozo(int _posicionPozo)
-         {
-             return _posicionPozo;
-         }
-         public static char[] Descartar50()
+        public static List<pozo> ListarPozo()
+        {
+            return _ListaPozo;
+        }
+        public static int DevolverImportePozoActual()
+        {
+            return _ListaPozo[_posicionPozo].Importe;
+        }
+        /* public static char[] Descartar50()
          {
              if (Comodin50 == true)
              {
