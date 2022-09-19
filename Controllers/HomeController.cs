@@ -33,7 +33,6 @@ public class HomeController : Controller
     }
     public IActionResult Pregunta(string Nombre)
     {
-        ViewBag.PozoAcumulado = juegoQQSM.DevolverImportePozoActual();
         ViewBag.Pozo = juegoQQSM.ListarPozo();
         ViewBag.Pregunta = juegoQQSM.ObtenerProximaPregunta();
         ViewBag.Respuesta = juegoQQSM.ObtenerRespuestas();
@@ -42,24 +41,23 @@ public class HomeController : Controller
     public IActionResult PreguntaRespondida(char opcion, char opcionComodin)
     {
         var acierto = juegoQQSM.respuestaUsuario(opcion, opcionComodin);
-        ViewBag.PozoAcumulado = juegoQQSM.DevolverImportePozoActual();
         ViewBag.Pozo = juegoQQSM.ListarPozo();
-        if (acierto == true)
+        var id = juegoQQSM.GetIDPreguntaActual();
+        if (acierto == true && id != 20)
         {
+            ViewBag.PozoAcumulado = juegoQQSM.DevolverImportePozoActual(true);
+
             return View("RespuestapreguntaOk");
         }
         else
         {
+            ViewBag.PozoAcumulado = juegoQQSM.DevolverImportePozoActual(false);
             return View("PantallaFindelJuego");
         }
     }
     public IActionResult PantallaFindelJuego()
     {
-        ViewBag.PozoAcumulado = juegoQQSM.DevolverImportePozoActual();
-        return View();
-    }
-    public IActionResult RespuestapreguntaOK()
-    {
+        ViewBag.PozoAcumulado = juegoQQSM.DevolverImportePozoActualRetirado();
         return View();
     }
     public IActionResult DivisionDeOpciones()

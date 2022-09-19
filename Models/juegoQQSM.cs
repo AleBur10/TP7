@@ -26,7 +26,7 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
             _preguntaActual = 0;
             _respuestaCorrectaActual = ' ';
             _posicionPozo = 0;
-            _pozoAcumuladoSeguro = 5000;
+            _pozoAcumuladoSeguro = 0;
             _pozoAcumulado = 0;
             _comodin5050 = true;
             _comodinDobleChance = true;
@@ -59,6 +59,11 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
                 _player = bd.QueryFirstOrDefault<Jugador>("SELECT TOP 1 * FROM Jugadores ORDER BY IdJugador DESC");
             }
 
+        }
+
+        public static int GetIDPreguntaActual()
+        {
+            return _preguntaActual;
         }
         public static Pregunta ObtenerProximaPregunta()
         {
@@ -120,10 +125,26 @@ namespace TP7_Bursztyn_Witlis_Akselrad.Models
         {
             return _ListaPozo;
         }
-        public static int DevolverImportePozoActual()
+        public static int DevolverImportePozoActual(bool acerto)
+        {
+            if (acerto == true) 
+            {
+                if (_ListaPozo[_posicionPozo].ValorSeguro == true)
+                {
+                    _pozoAcumuladoSeguro = _ListaPozo[_posicionPozo].Importe;
+                }
+                return _ListaPozo[_posicionPozo].Importe;
+            }
+            else
+            {
+                return _pozoAcumuladoSeguro;
+            }
+        }
+        public static int DevolverImportePozoActualRetirado()
         {
             return _ListaPozo[_posicionPozo].Importe;
         }
+
         /* public static char[] Descartar50()
          {
              if (Comodin50 == true)
